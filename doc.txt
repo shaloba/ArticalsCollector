@@ -1,0 +1,36 @@
+News-Collector
+===============
+
+Abstract:
+News collector is a simple demo for collecting popular news site main articles.
+This module using BeautifulSoup Module to extract the html tags data.
+The module combine from Three main classes:
+    1. FileDao- managing the article storage.
+    2. Search- managing the search
+    3. Collector- managing the articles collection
+
+Class Collector inheriting FileDao and Search for the use of their capabilities
+
+
+
+Usage:
+    Before running the script, activate the virtual environment:
+        1. cd ~/ArticlesCollector
+        2. source venv/bin/activate
+
+    Examples:
+        1. python articles_collector.py --collect
+        2. python articles_collector.py --search "had to try to escape"
+
+
+Output:
+    The articles data will store in "articles.txt" in JSON format.
+
+
+Notice:
+    1. To extract the site main links I used simple regex with the requests package.
+       For more efficient and deeper scanning use Scrapy framework.
+
+    2. This demo store the output in the the machine file system.
+       On production use data base. Elastic-Search is most suitable.
+
